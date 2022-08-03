@@ -1,0 +1,49 @@
+body > table{
+    width: 80%;
+}
+table{
+    border: none;
+}
+table.list{
+    width:100%;
+}
+td, th {
+    /* border: 2px solid #b1a9a9; */
+    text-align: left;
+    padding: 8px;
+}
+input[type=text], input[type=number], input[type=textarea]{
+    width: 100%;
+    padding: 10px 15px;
+    margin: 7px 0;
+    display: inline-block;
+    /* border: 1px solid rgb(17, 16, 16);
+    border-radius: 2px; */
+    box-sizing: border-box;
+}
+input[type=date]{
+    width: 30%;
+    background-color:rgb(254, 255, 254);
+    color: rgb(2, 2, 2);
+    padding: 10px 15px;
+    margin: 6px 0;
+    border: 1px solid;
+    border-radius: 2px;
+    cursor: pointer;
+}
+form div.form-action-buttons{
+    text-align: right;
+}
+a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: #ee009f;
+    margin-right: 4px;
+}
+label.validation-error{
+    color:   rgb(61, 20, 158);
+    margin-left: 5px;
+}
+.hide{
+    display:none;
+}

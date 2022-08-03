@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Product</title>
+    </head>
+    <body>
+        <p id="demo"></p>
+        <h3 class="text-center my-3">Product Management</h3>
+        <table>
+                <td>
+                    <form novalidate #f="ngForm" >
+                    
+                    <div class="form-group"
+        
+                    [ngClass]="{
+                     'has-danger': Productid.invalid && (Productid.dirty || Productid?.touched),
+                     'has-success': Productid?.valid && (Productid?.dirty || Productid?.touched)
+                }">
+
+                        <label for="Productid">Productid :</label>
+                        <input type="number" id="Productid" name="_id" placeholder="Enter Productid"
+                        [(ngModel)]="product.Productid"
+                        required
+                        #Productid ="ngModel">
+                        <!-- <label id="prodId_errorMsg"></label> -->
+                        <div class="form-control-feedback"
+                        *ngIf="Productid.errors && (Productid.dirty || Productid.touched)">
+                     <p *ngIf="Productid.errors?.['required']">Productid is required</p>
+                   </div>
+                        <br><br>
+                    </div>
+                    <div class="form-group"
+        
+                    [ngClass]="{
+                     'has-danger': Productname.invalid && (Productname.dirty || Productname?.touched),
+                     'has-success': Productname?.valid && (Productname?.dirty || Productname?.touched)
+                }">
+
+                        <label for="Productname">ProductName :</label>
+                        <input type="text" id="Productname" name="Productname" placeholder="Enter Productname"
+                        [(ngModel)]="product.Productname"
+                        required
+                        #Productname ="ngModel">
+                        <div class="form-control-feedback"
+                        *ngIf="Productname.errors && (Productname.dirty || Productname.touched)">
+                     <p *ngIf="Productname.errors?.['required']">Productname is required</p>
+                   </div>
+                        <br><br>
+                    </div>
+                    <div class="form-group"
+        
+                    [ngClass]="{
+                     'has-danger': Productdescription.invalid && (Productdescription.dirty || Productdescription?.touched),
+                     'has-success': Productdescription?.valid && (Productdescription?.dirty || Productdescription?.touched)
+                }">
+
+                        <label for="Productdescription">ProductDescription :</label>
+                        <input type="textarea" id="Productdescription" name="Productdescription" placeholder="Enter Productdescription"
+                        [(ngModel)]="product.Productdescription"
+                        required
+                        #Productdescription ="ngModel">
+                        <div class="form-control-feedback"
+                        *ngIf="Productdescription.errors && (Productdescription.dirty || Productdescription.touched)">
+                     <p *ngIf="Productdescription.errors?.['required']">ProductDescription is required</p>
+                   </div>
+                        <br><br>
+                    </div>
+                    <div class="form-group"
+        
+                    [ngClass]="{
+                     'has-danger': Startdate.invalid && (Startdate.dirty || Startdate?.touched),
+                     'has-success': Startdate?.valid && (Startdate?.dirty || Startdate?.touched)
+                }">
+
+                        <label for="Startdate">Startdate :</label>
+                        <input type="date" id="Startdate" name="Startdate" placeholder="Enter Startdate"
+                        [(ngModel)]="product.Startdate"
+                        required
+                        #Startdate ="ngModel">
+                        <!-- <label id="prodId_errorMsg"></label> -->
+                        <div class="form-control-feedback"
+                        *ngIf="Startdate.errors && (Startdate.dirty || Startdate.touched)">
+                     <p *ngIf="Startdate.errors?.['required']">Startdate is required</p>
+                   </div>
+                        <br><br>
+                    </div>
+                        
+                    <div class="form-group"
+        
+                    [ngClass]="{
+                     'has-danger': Enddate.invalid && (Enddate.dirty || Enddate?.touched),
+                     'has-success': Enddate?.valid && (Enddate?.dirty || Enddate?.touched)
+                }">
+
+                        <label for="Enddate">Enddate :</label>
+                        <input type="date" id="Enddate" name="Enddate" placeholder="Enter Enddate"
+                        [(ngModel)]="product.Enddate"
+                        required
+                        #Enddate ="ngModel">
+                        <div class="form-control-feedback"
+                        *ngIf="Enddate.errors && (Enddate.dirty || Enddate.touched)">
+                     <p *ngIf="Enddate.errors?.['required']">Enddate is required</p>
+                   </div>
+                   <!-- {{product.Startdate}} -->
+                        <br><br>
+                    </div>
+                        
+                            <button (click)="saveData()" id="save_btn" class="btn" [disabled]="f.invalid">Submit</button>
+                            <!-- {{editMode? 'Update':'Submit'}} -->
+        </form>
+                </td>
+                </table>
+            </body>
+            </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Product </title>
+    </head>
+    <body>
+        <div class="container my-4">
+            <h3 class="text-center my-3">Product Table</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Productid </th>
+                    <th scope="col">ProductName </th>
+                    <th scope="col">ProductDescription </th>
+                    <th scope="col">Startdate</th>
+                    <th scope="col">Enddate</th>
+                    <!-- <th scope="col">Created date</th> -->
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <tr *ngFor="let product of products">
+                    <th scope="row">{{product.Productid}}</th>
+                    <td>{{product.Productname}}</td>
+                    <td>{{product.Productdescription}}</td>
+                    <td>{{product.Startdate}}</td>
+                    <td>{{product.Enddate}}</td>
+                     <!-- <td>{{product.createddate}}</td> -->
+                    <td><button id="edit" class="btn btn-success" (click)="edited(product)" >Edit</button></td>
+                    <td><button id="delete" class="btn btn-primary btn-danger" (click)="deleted(product)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
