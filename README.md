@@ -1,6 +1,9 @@
 # Product Management
 
-**MEAN STACK - CRUD**
+**Coded by :**
+Vaidehi Akhani <br/>
+**Language :**
+MEAN STACK
 
 M - MongoDB <br/>
 E - Express.js <br/>
