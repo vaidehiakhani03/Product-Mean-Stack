@@ -10,7 +10,6 @@ N - Node.js <br/>
 ## Pre-requisites
 + git - [Installation guide](https://github.com/git-guides/install-git) . <br/>
 + node.js - [Download page](https://nodejs.org/en/download/) . <br/>
-+ npm - comes with node  - [Download page](https://classic.yarnpkg.com/en/docs/install#windows-stable) . <br/>
 + mongodb - [Download page](https://www.mongodb.com/try/download/community) . <br/>
 
 # To Setup <br/>
